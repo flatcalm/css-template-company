@@ -440,6 +440,15 @@ section.me ul.list ul.in li p::before {
     cursor: pointer;
 }
 
+/* section.sns style */
+/* section.sns {
+    margin-bottom: 60px;
+}
+
+section.sns ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 section.sns .title {
     padding: 40px;
 }
@@ -455,7 +464,7 @@ section.sns .sub-container li {
 section.sns .sub-container li a .img-box {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    max-height: 220px;
     margin-bottom: 20px;
 }
 
@@ -474,12 +483,14 @@ section.sns .sub-container li a .img-box::before {
     transition: 0.3s;
 }
 
-section.sns .sub-container li a .img-box:hover::before {
+section.sns .sub-container li a:hover .img-box::before {
     width: 100%;
 }
 
 section.sns .sub-container li a .img-box::after {
     content: 'BLOG';
+    font-size: 16px;
+    font-family: 'Exo 2', sans-serif;
     color: #fff;
     padding: 5px 20px;
     border: 1px solid #fff;
@@ -490,7 +501,7 @@ section.sns .sub-container li a .img-box::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.3s;
+    transition: 0.7s;
 }
 
 section.sns .sub-container li a .img-box:hover::after {
@@ -509,6 +520,326 @@ section.sns .sub-container li a p {
 }
 
 section.sns .sub-container li a .time {
-    color: #ddd;
-    font-size: 8px;
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+section.sns .sub-container li a .time i {
+    margin-right: 5px;
+    font-size: 0.9em;
+} */
+section.sns {
+    margin-bottom: 60px;
+}
+
+section.sns ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section.sns ul li {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+
+section.sns ul li:last-child {
+    margin-right: 0;
+}
+
+section.sns ul li .img-box {
+    max-height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.sns ul li .img-box img {
+    width: 100%;
+}
+
+
+section.sns ul li .img-box::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(255, 131, 66, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+section.sns ul li a:hover .img-box::before {
+    width: 100%;
+}
+
+section.sns ul li .img-box::after {
+    content: 'BLOG';
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    padding: 5px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+section.sns ul li a:hover .img-box::after {
+    opacity: 1;
+}
+
+section.sns ul li .bottom {
+    padding: 20px 0 20px 30px;
+    box-sizing: border-box;
+}
+
+section.sns ul li .bottom p {
+    font-size: 18px;
+}
+
+section.sns ul li .bottom p.color {
+    color: #ff8342;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+section.sns ul li .bottom p.time {
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+section.sns ul li .bottom p.time i {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+/* footer style */
+footer {
+    border-top: 1px solid #999;
+    padding: 30px 0;
+}
+
+footer .inner {
+    width: 84%;
+    margin: 0 auto;
+}
+
+footer .inner .ft-logo {
+    float: left;
+    width: 14%;
+}
+footer .inner .ft-logo img {
+    width: 100%;
+}
+
+footer .inner .address {
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+footer .inner .address li:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+footer .inner .address li:last-child {
+    color: #999;
+}
+
+footer .inner .list {
+    float: right;
+    margin-top: 20px;
+}
+
+footer .inner .list li {
+    float: left;
+    margin-left: 80px;
+}
+
+footer .inner .list li:last-child {
+    font-weight: 700;
+}
+
+footer .inner .list li a:hover {
+    color: #ff8342;
+    text-decoration: underline;
+}
+
+/* 반응형 웹 디자인 */
+/* 노트북 해상도 1600 px 미만 */
+@media screen and (max-width: 1599px) {
+    header .inner-header nav {
+        display: none;
+    }
+
+    header .inner-header .gnb-mobile {
+        display: block;
+        float: right;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    section.main .main-title h2 {
+        font-size: 35px;
+    }
+
+    section.main .main-title p {
+        font-size: 18px;
+    }
+
+    section.main .main-title .view {
+        font-size: 12px;
+        width: 120px;
+    }
+
+    section.sns ul li .img-box {
+        max-height: 170px;
+    }
+
+    footer .inner .ft-logo {
+        width: 30%;
+    }
+}
+
+/* 태블릿 1024px 이하 해상도 (아이패드 프로) */
+@media screen and (max-width: 1024px) {
+    section.me ul.list ul.in li p::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #ff8342;
+        position: absolute;
+        left: -10px;
+        top: 8px;
+    }
+    section.me ul.list > li p {
+        margin-left: 15px;
+    }
+    #incruit-btn {
+        width: 220px;
+        margin: 20px auto 0;
+        padding: 10px 0;
+    }
+    section.innovation .img-box .inner .bottom p {
+        float: none;
+        display: block;
+        width: 100%;
+
+    }
+    section.innovation .img-box .inner .bottom a {
+        float: none;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 20%);
+    }
+    section.innovation .img-box .inner .bottom{
+        margin-bottom: 20px;
+    }
+}
+
+/* 태블릿 768px 이하 해상도 (아이패드 미니) */
+@media screen and (max-width: 768px) {
+    section.about .sub-container li {
+        width: 100%;
+        float: none;
+    }
+    section.about ul li {
+        margin-bottom: 60px;
+    }
+    section.me ul.list ul.in li em {
+        float: none;
+        display: block;
+        margin-bottom: 5px;
+    }
+    section.me ul.list ul.in p {
+        float: none;
+        display: block;
+    }
+    section.about ul li a .text {
+        padding: 25px;
+    }
+    section.sns ul li {
+        float: none;
+        width: 100%;
+    }
+    section.sns ul li .img-box {
+        max-height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .inner .list {
+        float: left;
+    }
+    footer .inner .address {
+        margin-bottom: 20px;
+    }
+    footer .inner .list li {
+        margin-left: 45px;
+    }
+}
+
+/* 태블릿 414px 이하 해상도 (아이폰 6/7/8 plus) */
+@media screen and (max-width: 414px) {
+    header {
+        height: 80px;
+    }
+    header .inner-header, section .sub-container, footer .inner {
+        width: 95%;
+    }
+    section.main .main-title h2 {
+        font-size: 30px;
+    }
+    section .title h2 {
+        font-size: 30px;
+    }
+    section .title p {
+        font-size: 14px;
+    }
+    section.about .sub-container li {
+        height: 380px;
+    }
+    section.about ul li a .text h3 {
+        font-size: 18px;
+    }
+    section.about ul li a .text p {
+        font-size: 12px;
+    }
+    section.innovation .img-box .inner h3 {
+        font-size: 14px;
+        padding: 20px 25px;
+    }
+    section.innovation .img-box .inner .bottom {
+        padding: 30px;
+    }
+    section.innovation .img-box .inner .bottom p {
+        font-size: 12px;
+    }
+    section.innovation .img-box .inner .bottom a {
+        font-size: 8px;
+    }
+
+    footer .inner .ft-logo {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    footer .inner .address {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    footer .inner .list li {
+        display: none;
+    }
+    br.mo {
+        display: block;
+    }
 }
