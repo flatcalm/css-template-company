@@ -789,6 +789,7 @@ footer .inner .list li a:hover {
 @media screen and (max-width: 414px) {
     header {
         height: 80px;
+        line-height: 80px;
     }
     header .inner-header, section .sub-container, footer .inner {
         width: 95%;
